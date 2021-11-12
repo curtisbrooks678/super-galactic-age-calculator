@@ -43,41 +43,41 @@ describe('SpaceHuman', () => {
 
   test('should return how many years a user has left on mercury if age is under life expectancy', () => {
     spaceHuman.mercury();
-    expect(spaceHuman.yearsLeft()).toEqual(333);
+    expect(spaceHuman.years()).toEqual(333);
   });
   
   test('should return how many years a user has left on venus if age is under life expectancy', () => {
     spaceHuman.venus();
-    expect(spaceHuman.yearsLeft()).toEqual(129);
+    expect(spaceHuman.years()).toEqual(129);
   });
 
   test('should return how many years a user has left on mars if age is under life expectancy', () => {
     spaceHuman.mars();
-    expect(spaceHuman.yearsLeft()).toEqual(43);
+    expect(spaceHuman.years()).toEqual(43);
   });
 
   test('should return how many years a user has left on jupiter if age is under life expectancy', () => {
     spaceHuman.jupiter();
-    expect(spaceHuman.yearsLeft()).toEqual(7);
+    expect(spaceHuman.years()).toEqual(7);
   });
 
   test('if user age is greater than life expectancy, it should return how many years a user has surpassed their life expectancy on mercury', () => {
     oldSpaceHuman.mercury();
-    expect(oldSpaceHuman.yearsSurpassed()).toEqual(84);
+    expect(oldSpaceHuman.years()).toEqual(84);
   });
 
   test('if user age is greater than life expectancy, it should return how many years a user has surpassed their life expectancy on venus', () => {
     oldSpaceHuman.venus();
-    expect(oldSpaceHuman.yearsSurpassed()).toEqual(32);
+    expect(oldSpaceHuman.years()).toEqual(32);
   });
 
   test('if user age is greater than life expectancy, it should return how many years a user has surpassed their life expectancy on mars', () => {
     oldSpaceHuman.mars();
-    expect(oldSpaceHuman.yearsSurpassed()).toEqual(10);
+    expect(oldSpaceHuman.years()).toEqual(10);
   });
 
   test('if user age is greater than life expectancy, it should return how many years a user has surpassed their life expectancy on jupiter', () => {
     oldSpaceHuman.jupiter();
-    expect(oldSpaceHuman.yearsSurpassed()).toEqual(2);
+    expect(oldSpaceHuman.years()).toEqual(2);
   });
 });

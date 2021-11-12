@@ -24,11 +24,14 @@ export default class SpaceHuman {
     this.lifeExpectancy = Math.floor(this.lifeExpectancy / 11.86);
   }
 
-  yearsLeft() {
-    return this.lifeExpectancy - this.inputAge;
-  }
-
-  yearsSurpassed() {
-    return this.inputAge - this.lifeExpectancy;
+  years() {
+    if (this.inputAge < this.lifeExpectancy) {
+      return this.lifeExpectancy - this.inputAge;
+    } else if (this.inputAge > this.lifeExpectancy) {
+      return this.inputAge - this.lifeExpectancy;
+    } 
+    // else if (this.inputAge === this.lifeExpectancy) {
+    //   return "Congrats! You made it to your life expectancy!";
+    // }
   }
 }
