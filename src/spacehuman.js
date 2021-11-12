@@ -3,4 +3,8 @@ export default class SpaceHuman {
     this.inputAge = inputAge;
     this.lifeExpectancy = lifeExpectancy;
   }
+
+  mercury() {
+    
+  }   
 }
