@@ -5,6 +5,7 @@ export default class SpaceHuman {
   }
 
   mercury() {
-    
+    this.inputAge = Math.round(this.inputAge / 0.24);
+    return this.inputAge;
   }   
 }
