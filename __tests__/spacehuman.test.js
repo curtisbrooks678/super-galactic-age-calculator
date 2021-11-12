@@ -36,14 +36,23 @@ describe('SpaceHuman', () => {
     expect(spacehuman.lifeExpectancy).toEqual(8);
   });
 
-  test('should return how many years a user has left on each planet if age is under life expectancy', () => {
+  test('should return how many years a user has left on mercury if age is under life expectancy', () => {
     spacehuman.mercury();
     expect(spacehuman.yearsLeft()).toEqual(333);
+  });
+  
+  test('should return how many years a user has left on venus if age is under life expectancy', () => {
     spacehuman.venus();
     expect(spacehuman.yearsLeft()).toEqual(129);
+  });
+
+  test('should return how many years a user has left on mars if age is under life expectancy', () => {
     spacehuman.mars();
     expect(spacehuman.yearsLeft()).toEqual(43);
-    spacehuman.mercury();
+  });
+  
+  test('should return how many years a user has left on jupiter if age is under life expectancy', () => {
+    spacehuman.jupiter();
     expect(spacehuman.yearsLeft()).toEqual(7);
   });
 });
