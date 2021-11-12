@@ -29,6 +29,6 @@ export default class SpaceHuman {
   }
 
   yearsSurpassed() {
-    
+    return this.inputAge - this.lifeExpectancy;
   }
 }

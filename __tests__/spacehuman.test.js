@@ -61,7 +61,7 @@ describe('SpaceHuman', () => {
     expect(spaceHuman.yearsLeft()).toEqual(7);
   });
 
-  test('should return how many years a user has surpassed their life expectancy on mercury', () => {
+  test('if user age is greater than life expectancy, it should return how many years a user has surpassed their life expectancy on mercury', () => {
     oldSpaceHuman.mercury();
     expect(oldSpaceHuman.yearsSurpassed()).toEqual(84);
   });
