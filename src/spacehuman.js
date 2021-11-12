@@ -10,6 +10,7 @@ export default class SpaceHuman {
   }   
 
   venus() {
-
+    this.inputAge = Math.floor(this.inputAge / 0.62);
+    this.lifeExpectancy = Math.floor(this.lifeExpectancy / 0.62);
   }   
 }
