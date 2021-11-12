@@ -12,7 +12,11 @@ describe('SpaceHuman', () => {
     expect(spacehuman.lifeExpectancy).toEqual(100);
   });
 
-  test('should return age from earth years to mercury years, rounding to two decimal places', () => {
+  test('should return age from earth years to mercury years, rounding down', () => {
     expect(spacehuman.mercury()).toEqual(83);
+  });
+
+  test('should return life expectancy from earth years to mercury years, rounding down', () => {
+    expect(spacehuman.mercury()).toEqual(416);
   });
 });
