@@ -12,9 +12,15 @@ describe('SpaceHuman', () => {
     expect(spacehuman.lifeExpectancy).toEqual(100);
   });
 
-  test('should return age from earth years to mercury years, rounding down', () => {
+  test('should return age and life expectancy from earth years to mercury years, rounding down', () => {
     spacehuman.mercury();
     expect(spacehuman.inputAge).toEqual(83);
     expect(spacehuman.lifeExpectancy).toEqual(416);
+  });
+
+  test('should return age and life expectancy from earth years to venus years, rounding down', () => {
+    spacehuman.venus();
+    expect(spacehuman.inputAge).toEqual(32);
+    expect(spacehuman.lifeExpectancy).toEqual(161);
   });
 });
