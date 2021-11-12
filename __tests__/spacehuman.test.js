@@ -35,4 +35,15 @@ describe('SpaceHuman', () => {
     expect(spacehuman.inputAge).toEqual(1);
     expect(spacehuman.lifeExpectancy).toEqual(8);
   });
+
+  test('should return how many years a user has left on each planet if age is under life expectancy', () => {
+    spacehuman.mercury();
+    expect(spacehuman.yearsLeft()).toEqual(333);
+    spacehuman.venus();
+    expect(spacehuman.yearsLeft()).toEqual(129);
+    spacehuman.mars();
+    expect(spacehuman.yearsLeft()).toEqual(43);
+    spacehuman.mercury();
+    expect(spacehuman.yearsLeft()).toEqual(7);
+  });
 });
