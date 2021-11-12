@@ -29,4 +29,10 @@ describe('SpaceHuman', () => {
     expect(spacehuman.inputAge).toEqual(10);
     expect(spacehuman.lifeExpectancy).toEqual(53);
   });
+
+  test('should return age and life expectancy from earth years to jupiter years, rounding down', () => {
+    spacehuman.jupiter();
+    expect(spacehuman.inputAge).toEqual(1);
+    expect(spacehuman.lifeExpectancy).toEqual(8);
+  });
 });
