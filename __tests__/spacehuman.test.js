@@ -50,9 +50,11 @@ describe('SpaceHuman', () => {
     spacehuman.mars();
     expect(spacehuman.yearsLeft()).toEqual(43);
   });
-  
+
   test('should return how many years a user has left on jupiter if age is under life expectancy', () => {
     spacehuman.jupiter();
     expect(spacehuman.yearsLeft()).toEqual(7);
   });
+
+  
 });
