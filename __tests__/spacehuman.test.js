@@ -65,4 +65,19 @@ describe('SpaceHuman', () => {
     oldSpaceHuman.mercury();
     expect(oldSpaceHuman.yearsSurpassed()).toEqual(84);
   });
+
+  test('if user age is greater than life expectancy, it should return how many years a user has surpassed their life expectancy on venus', () => {
+    oldSpaceHuman.venus();
+    expect(oldSpaceHuman.yearsSurpassed()).toEqual(32);
+  });
+
+  test('if user age is greater than life expectancy, it should return how many years a user has surpassed their life expectancy on mars', () => {
+    oldSpaceHuman.mars();
+    expect(oldSpaceHuman.yearsSurpassed()).toEqual(10);
+  });
+
+  test('if user age is greater than life expectancy, it should return how many years a user has surpassed their life expectancy on jupiter', () => {
+    oldSpaceHuman.jupiter();
+    expect(oldSpaceHuman.yearsSurpassed()).toEqual(2);
+  });
 });
