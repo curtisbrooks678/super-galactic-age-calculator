@@ -20,6 +20,7 @@ export default class SpaceHuman {
   }   
 
   jupiter() {
-    
+    this.inputAge = Math.floor(this.inputAge / 11.86);
+    this.lifeExpectancy = Math.floor(this.lifeExpectancy / 11.86);
   }
 }
