@@ -1,18 +1,16 @@
-import Triangle from './spacehuman.js';
+import SpaceHuman from './spacehuman.js';
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 
-
 $(document).ready(function() {
   $('#triangle-checker-form').submit(function(event) {
     event.preventDefault();
-    const length1 = $('#length1').val();
-    const length2 = $('#length2').val();
-    const length3 = $('#length3').val();
-    const triangle = new Triangle(length1, length2, length3);
-    const response = triangle.checkType();
-    $('#response').append("<p>" + response + "</p>");
+    const age1 = $('#age').val();
+    const lifeExpect1 = $('#life-expectancy').val();
+    const user = new SpaceHuman(age1, lifeExpect1);
+    user.mercury();
+    $('#space-ages').html("<p> Age on Mercury: " + user.inputAge + "</p>");
   });
 });
