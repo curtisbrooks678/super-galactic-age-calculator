@@ -15,6 +15,7 @@ export default class SpaceHuman {
   }   
 
   mars() {
-    
-  }
+    this.inputAge = Math.floor(this.inputAge / 1.88);
+    this.lifeExpectancy = Math.floor(this.lifeExpectancy / 1.88);
+  }   
 }
