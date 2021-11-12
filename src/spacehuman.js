@@ -30,8 +30,8 @@ export default class SpaceHuman {
     } else if (this.inputAge > this.lifeExpectancy) {
       return this.inputAge - this.lifeExpectancy;
     } 
-    // else if (this.inputAge === this.lifeExpectancy) {
-    //   return "Congrats! You made it to your life expectancy!";
-    // }
+    else if (this.inputAge === this.lifeExpectancy) {
+      return "Congrats! You made it to your life expectancy!";
+    }
   }
 }
