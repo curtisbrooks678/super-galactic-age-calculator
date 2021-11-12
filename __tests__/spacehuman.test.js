@@ -80,4 +80,9 @@ describe('SpaceHuman', () => {
     oldSpaceHuman.jupiter();
     expect(oldSpaceHuman.years()).toEqual(2);
   });
+
+  test('if user age is equal to life expectancy, return massage that user made it', () => {
+    let madeIt = new SpaceHuman(100, 100);
+    expect(madeIt.years()).toEqual("Congrats! You made it to your life expectancy!");
+  });
 });
