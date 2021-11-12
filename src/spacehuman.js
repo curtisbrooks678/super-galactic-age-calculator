@@ -4,8 +4,4 @@ export default class Triangle {
     this.side2 = side2;
     this.side3 = side3;
   }
-  
-  checkType() {
-  return "I can't answer that yet!";
-  }
 }
