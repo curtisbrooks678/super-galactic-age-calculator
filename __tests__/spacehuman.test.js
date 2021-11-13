@@ -18,67 +18,75 @@ describe('SpaceHuman', () => {
   });
 
   test('should return age and life expectancy from earth years to mercury years, rounding down', () => {
-    spaceHuman.mercury();
-    expect(spaceHuman.inputAge).toEqual(83);
-    expect(spaceHuman.lifeExpectancy).toEqual(416);
+    spaceHuman.planets();
+    expect(spaceHuman.mercuryAge).toEqual(83);
+    expect(spaceHuman.mercuryLifeExpectancy).toEqual(416);
   });
 
   test('should return age and life expectancy from earth years to venus years, rounding down', () => {
-    spaceHuman.venus();
-    expect(spaceHuman.inputAge).toEqual(32);
-    expect(spaceHuman.lifeExpectancy).toEqual(161);
+    spaceHuman.planets();
+    expect(spaceHuman.venusAge).toEqual(32);
+    expect(spaceHuman.venusLifeExpectancy).toEqual(161);
   });
 
   test('should return age and life expectancy from earth years to mars years, rounding down', () => {
-    spaceHuman.mars();
-    expect(spaceHuman.inputAge).toEqual(10);
-    expect(spaceHuman.lifeExpectancy).toEqual(53);
+    spaceHuman.planets();
+    expect(spaceHuman.marsAge).toEqual(10);
+    expect(spaceHuman.marsLifeExpectancy).toEqual(53);
   });
 
   test('should return age and life expectancy from earth years to jupiter years, rounding down', () => {
-    spaceHuman.jupiter();
-    expect(spaceHuman.inputAge).toEqual(1);
-    expect(spaceHuman.lifeExpectancy).toEqual(8);
+    spaceHuman.planets();
+    expect(spaceHuman.jupiterAge).toEqual(1);
+    expect(spaceHuman.jupiterLifeExpectancy).toEqual(8);
   });
 
   test('should return how many years a user has left on mercury if age is under life expectancy', () => {
-    spaceHuman.mercury();
-    expect(spaceHuman.years()).toEqual(333);
+    spaceHuman.planets();
+    spaceHuman.years();
+    expect(spaceHuman.mercuryYearsLeft).toEqual(333);
   });
   
   test('should return how many years a user has left on venus if age is under life expectancy', () => {
-    spaceHuman.venus();
-    expect(spaceHuman.years()).toEqual(129);
+    spaceHuman.planets();
+    spaceHuman.years();
+    expect(spaceHuman.venusYearsLeft).toEqual(129);
   });
 
   test('should return how many years a user has left on mars if age is under life expectancy', () => {
-    spaceHuman.mars();
-    expect(spaceHuman.years()).toEqual(43);
+    spaceHuman.planets();
+    spaceHuman.years()
+    expect(spaceHuman.marsYearsLeft).toEqual(43);
   });
 
   test('should return how many years a user has left on jupiter if age is under life expectancy', () => {
-    spaceHuman.jupiter();
-    expect(spaceHuman.years()).toEqual(7);
+    spaceHuman.planets();
+    spaceHuman.years()
+    expect(spaceHuman.jupiterYearsLeft).toEqual(7);
   });
 
   test('if user age is greater than life expectancy, it should return how many years a user has surpassed their life expectancy on mercury', () => {
-    oldSpaceHuman.mercury();
-    expect(oldSpaceHuman.years()).toEqual(84);
+    oldSpaceHuman.planets();
+    oldSpaceHuman.years()
+    expect(oldSpaceHuman.mercuryYearsAhead).toEqual(84);
   });
 
   test('if user age is greater than life expectancy, it should return how many years a user has surpassed their life expectancy on venus', () => {
-    oldSpaceHuman.venus();
-    expect(oldSpaceHuman.years()).toEqual(32);
+    oldSpaceHuman.planets();
+    oldSpaceHuman.years()
+    expect(oldSpaceHuman.venusYearsAhead).toEqual(32);
   });
 
   test('if user age is greater than life expectancy, it should return how many years a user has surpassed their life expectancy on mars', () => {
-    oldSpaceHuman.mars();
-    expect(oldSpaceHuman.years()).toEqual(10);
+    oldSpaceHuman.planets();
+    oldSpaceHuman.years()
+    expect(oldSpaceHuman.marsYearsAhead).toEqual(10);
   });
 
   test('if user age is greater than life expectancy, it should return how many years a user has surpassed their life expectancy on jupiter', () => {
-    oldSpaceHuman.jupiter();
-    expect(oldSpaceHuman.years()).toEqual(2);
+    oldSpaceHuman.planets();
+    oldSpaceHuman.years()
+    expect(oldSpaceHuman.jupiterYearsAhead).toEqual(2);
   });
 
   test('if user age is equal to life expectancy, return massage that user made it', () => {

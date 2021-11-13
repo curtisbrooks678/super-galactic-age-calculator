@@ -1,5 +1,5 @@
 export default class SpaceHuman {
-  constructor(inputAge, lifeExpectancy, spaceYears, mercuryAge, mercuryLifeExpectancy, venusAge, venusLifeExpectancy, marsAge, marsLifeExpectancy, jupiterAge, jupiterLifeExpectancy) {
+  constructor(inputAge, lifeExpectancy, spaceYears, mercuryAge, mercuryLifeExpectancy, venusAge, venusLifeExpectancy, marsAge, marsLifeExpectancy, jupiterAge, jupiterLifeExpectancy, mercuryYearsLeft, mercuryYearsAhead, venusYearsLeft, venusYearsAhead, marsYearsLeft, marsYearsAhead, jupiterYearsLeft, jupiterYearsAhead) {
     this.inputAge = inputAge;
     this.lifeExpectancy = lifeExpectancy;
     this.spaceYears = spaceYears;
@@ -11,6 +11,14 @@ export default class SpaceHuman {
     this.marsLifeExpectancy = marsLifeExpectancy;
     this.jupiterAge = jupiterAge;
     this.jupiterLifeExpectancy = jupiterLifeExpectancy;
+    this.mercuryYearsLeft = mercuryYearsLeft;
+    this.mercuryYearsAhead = mercuryYearsAhead;
+    this.venusYearsLeft = venusYearsLeft;
+    this.venusYearsAhead = venusYearsAhead;
+    this.marsYearsLeft = marsYearsLeft;
+    this.marsYearsAhead = mercuryYearsAhead;
+    this.jupiterYearsLeft = jupiterYearsLeft;
+    this.jupiterYearsAhead = jupiterYearsAhead;
   }
 
   planets() {
@@ -25,12 +33,15 @@ export default class SpaceHuman {
   }
 
   years() {
-    if (this.inputAge < this.lifeExpectancy) {
-      this.spaceYears = this.lifeExpectancy - this.inputAge;
-    } else if (this.inputAge > this.lifeExpectancy) {
-      this.spaceYears = this.inputAge - this.lifeExpectancy;
-    } 
-    else if (this.inputAge === this.lifeExpectancy) {
+    this.mercuryYearsLeft = this.mercuryLifeExpectancy - this.mercuryAge;
+    this.venusYearsLeft = this.venusLifeExpectancy - this.venusAge;
+    this.marsYearsLeft = this.marsLifeExpectancy - this.marsAge;
+    this.jupiterYearsLeft = this.jupiterLifeExpectancy - this.jupiterAge;
+    this.mercuryYearsAhead = this.mercuryAge - this.mercuryLifeExpectancy;
+    this.venusYearsAhead = this.venusAge - this.venusLifeExpectancy;
+    this.marsYearsAhead = this.marsAge - this.marsLifeExpectancy;
+    this.jupiterYearsAhead = this.jupiterAge - this.jupiterLifeExpectancy;
+    if (this.inputAge === this.lifeExpectancy) {
       return "Congrats! You made it to your life expectancy!";
     }
   }
