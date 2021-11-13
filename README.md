@@ -1,66 +1,40 @@
-# _{Application Name}_
+# Super Galactic Age Calculator
 
 #### By Curtis Brooks
 
-#### _{Brief description of application}_
+#### This program takes a user's age and life expectancy and returns their age and life expectancy on various planets. 
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* JavaScript
+* Jest
+* HTML
+* CSS
+* Node.js
+* npm
+* Markdown
+* git
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+User enters their age and life expectancy and returns the user's ages and life expectancies on Mercury, Venus, Mars, and Jupiter. If the user has outlived their life expectancy, years lived past their life expectancy will be displayed for all planets. If the user is younger than their life expectancy, years left to live before life expectancy is reached is displayed.
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+* Clone [this](https://github.com/curtisbrooks678/super-galactic-age-calculator) repository to your desktop
+* Navigate to the top of the directory
+* Open VS Code or other code editor
+* Enter "npm run start" in your terminal to open development server in a browser
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* Need to reload page to refresh the output area. 
+* No code to deal with 0 as an input for life expectancy.
 
 ## License
 
 [MIT](https://en.wikipedia.org/wiki/MIT_License) 
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+Copyright (c) 11/12/21 Curtis Brooks
 
-Copyright (c) _date_ Curtis Brooks
 
-___________
-
-SPECS OUTLINE
-
-It will...
-
-describe: SpaceHuman()
-- return a SpaceHuman object with properties (inputAge, lifeExpectancy)
-
-describe: mercury()
-- return inputAge and lifeExpectancy on Mercury
-
-describe: venus()
-- return inputAge and lifeExpectancy on Venus
-
-describe: Mars()
-- return inputAge and lifeExpectancy on Mars
-
-describe: jupiter()
-- return inputAge and lifeExpectancy on Jupiter
-
-describe: yearsLeft()
-- return lifeExpectancy - inputAge
-
-describe: yearsSurpassed()
-- if inputAge is greater than lifeExpectancy, it will return number of years lived past lifeExpectancy
