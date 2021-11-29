@@ -25,6 +25,7 @@ User enters their age and life expectancy and returns the user's ages and life e
 * Navigate to the top of the directory
 * Open VS Code or other code editor
 * Enter "npm run start" in your terminal to open development server in a browser
+* To run tests in __tests__ file, enter "npm test" in your terminal.
 
 ## Known Bugs
 
